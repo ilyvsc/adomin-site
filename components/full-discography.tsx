@@ -186,17 +186,15 @@ export function FullDiscography() {
                 >
                   <div className="aspect-video bg-accent relative overflow-hidden">
                     {song.youtubeId ? (
-                      <>
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={`https://www.youtube.com/embed/${song.youtubeId}`}
-                          title={`${song.title.english} by Ado`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="border-0"
-                        ></iframe>
-                      </>
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${song.youtubeId}`}
+                        title={`${song.title.english} by Ado`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="border-0"
+                      ></iframe>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
                         <p className="text-sm text-accent-foreground">No official video available</p>

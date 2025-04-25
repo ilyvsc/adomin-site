@@ -12,7 +12,7 @@ export default function Home() {
       <HeroSection />
       <FanAppreciation />
       <FeaturedSongs />
-      {/* <DiscographyTimeline /> */}
+      <DiscographyTimeline />
       <ConnectSection />
       <NewsletterSection />
       <Footer />
