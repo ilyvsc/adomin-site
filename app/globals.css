@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(240 10% 3.9%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(240 10% 3.9%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(240 10% 3.9%);
+  --color-primary: hsl(196 100% 28%);
+  --color-primary-foreground: hsl(0 0% 98%);
+  --color-secondary: hsl(240 4.8% 15%);
+  --color-secondary-foreground: hsl(240 5.9% 10%);
+  --color-accent: hsl(240 4.8% 20%);
+  --color-accent-foreground: hsl(240 5.9% 10%);
+  --color-muted-foreground: hsl(240 3.8% 46.1%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-border: hsl(240 5.9% 90%);
+  --color-ado-white: hsl(240 5.9% 90%);
+  --color-ado-blue: hsl(196 100% 28%);
+  --color-ado-red: hsl(0 84.2% 60.2%);
+  --color-ado-key: var(--color-ado-red);
+
+  --animate-accordion-down: "accordion-down 0.2s ease-out";
+  --animate-accordion-up: "accordion-up 0.2s ease-out";
+}
+
+@layer base {
+  .dark {
+    --color-background: hsl(240, 13%, 18%);
+    --color-foreground: hsl(0 0% 100%);
+    --color-card: hsl(240 10% 5%);
+    --color-card-foreground: hsl(0 0% 100%);
+    --color-popover: hsl(240 10% 5%);
+    --color-popover-foreground: hsl(0 0% 100%);
+    --color-primary: hsl(196 100% 48%);
+    --color-primary-foreground: hsl(240 10% 5%);
+    --color-secondary: hsl(240 3.7% 95%);
+    --color-secondary-foreground: hsl(0 0% 100%);
+    --color-accent: hsl(240 3.7% 20%);
+    --color-accent-foreground: hsl(0 0% 100%);
+    --color-muted-foreground: hsl(240 5% 65%);
+    --color-destructive: hsl(0 62% 51%);
+    --color-border: hsl(240 5.9% 30%);
+    --color-ado-white: hsl(0 0% 98%);
+    --color-ado-blue: hsl(196 100% 65%);
+    --color-ado-red: hsl(0, 100%, 57%);
+    --color-ado-key: var(--color-ado-red)
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+  }
+}
