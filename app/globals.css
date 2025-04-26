@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Theme Colors */
 @theme {
   --color-background: hsl(0 0% 100%);
   --color-foreground: hsl(240 10% 3.9%);
@@ -19,12 +20,10 @@
   --color-ado-white: hsl(240 5.9% 90%);
   --color-ado-blue: hsl(196 100% 28%);
   --color-ado-red: hsl(0 84.2% 60.2%);
-  --color-ado-key: var(--color-ado-red);
-
-  --animate-accordion-down: "accordion-down 0.2s ease-out";
-  --animate-accordion-up: "accordion-up 0.2s ease-out";
+  --color-ado-key: var(--color-ado-blue);
 }
 
+/* Base Styles */
 @layer base {
   .dark {
     --color-background: hsl(240, 13%, 18%);
@@ -43,9 +42,9 @@
     --color-destructive: hsl(0 62% 51%);
     --color-border: hsl(240 5.9% 30%);
     --color-ado-white: hsl(0 0% 98%);
-    --color-ado-blue: hsl(196 100% 65%);
+    --color-ado-blue: 		hsl(230, 100%, 60%);
     --color-ado-red: hsl(0, 100%, 57%);
-    --color-ado-key: var(--color-ado-red);
+    --color-ado-key: var(--color-ado-blue);
   }
 
   * {
@@ -55,5 +54,23 @@
   body {
     background-color: var(--color-background);
     color: var(--color-secondary);
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
   }
 }

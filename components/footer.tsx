@@ -2,17 +2,22 @@ import React from "react";
 
 export function Footer() {
   return (
-    <footer className="py-8 border-t ">
-      <div className="container mx-auto px-4">
-        <div className="mt-2 pt-2 text-center">
-          <p className="text-xs text-accent-foreground mb-2">
-            This is a fan-made website with no official affiliation to Ado or
-            her management.
+    <footer className="py-10 border-t border-foreground/10 bg-background">
+      <div className="container mx-auto px-4 text-center space-y-4">
+        <div className="space-y-2">
+          <p className="text-sm text-accent-foreground">
+            This is a fan-made website dedicated to celebrating the incredible
+            artistry of Ado.
           </p>
-          <p className="text-xs text-accent-foreground">
-            &copy; {new Date().getFullYear()} Ado Fan Tribute. All rights
-            reserved.
+          <p className="text-sm text-accent-foreground">
+            We are not officially affiliated with Ado, her management, or
+            Universal Music Japan.
           </p>
+        </div>
+
+        <div className="text-xs text-accent-foreground mt-6">
+          &copy; {new Date().getFullYear()} Ado Fan Tribute — Powered by
+          passion, not profit.
         </div>
       </div>
     </footer>

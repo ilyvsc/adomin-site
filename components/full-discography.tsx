@@ -1,54 +1,78 @@
+"use client";
+
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { albums, songs } from "@/app/songs";
 import Image from "next/image";
 
 function getSongById(id: string) {
-  return songs.find((song) => song.id === id);
+  return songs.find((song) => song.id === id) || null;
 }
 
 export function FullDiscography() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-16">
       <Tabs defaultValue={albums[0].id} className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
+        {/* Album Tabs */}
+        <TabsList className="inline-flex items-center justify-center flex-wrap gap-2 px-4 py-2 rounded-lg bg-muted mx-auto">
           {albums.map((album) => (
-            <TabsTrigger key={album.id} value={album.id}>
+            <TabsTrigger
+              key={album.id}
+              value={album.id}
+              className="px-4 py-2 text-sm font-medium rounded-md transition-colors bg-background hover:bg-muted data-[state=active]:bg-ado-key data-[state=active]:text-white"
+            >
               {album.title.english}
             </TabsTrigger>
           ))}
         </TabsList>
 
         {albums.map((album) => (
-          <TabsContent key={album.id} value={album.id} className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="aspect-square relative overflow-hidden rounded-lg">
+          <TabsContent
+            key={album.id}
+            value={album.id}
+            className="mt-10 space-y-12"
+          >
+            {/* Album Header */}
+            <div className="flex flex-col md:flex-row items-start gap-8">
+              {/* Album image */}
+              <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-xl overflow-hidden shadow-lg shrink-0">
                 <Image
                   src={album.coverArt || "/placeholder.svg"}
                   alt={`${album.title.english} album cover`}
                   className="object-cover w-full h-full"
                   fill
+                  priority
                 />
               </div>
-              <div className="md:col-span-2">
-                <h2 className="text-3xl font-bold mb-2">
-                  {album.title.english} ({album.title.japanese})
+
+              {/* Album text */}
+              <div className="flex flex-col justify-center">
+                <h2 className="text-4xl font-extrabold mb-4">
+                  {album.title.english}{" "}
+                  <span className="text-ado-key text-2xl font-medium">
+                    ({album.title.japanese})
+                  </span>
                 </h2>
-                <p className="text-accent-foreground mb-4">
-                  Released: {album.releaseDate} - {album.tracks.length} songs
+                <p className="text-accent-foreground text-lg">
+                  Released:{" "}
+                  <span className="font-semibold">{album.releaseDate}</span> •{" "}
+                  <span className="font-semibold">{album.tracks.length}</span>{" "}
+                  songs
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Track Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {album.tracks.map((track) => {
                 const song = getSongById(track.songId);
                 if (!song) return null;
 
                 return (
-                  <div
+                  <Card
                     key={track.songId}
-                    className="space-y-4 bg-background/50 rounded-lg overflow-hidden hover:bg-background/80 transition-colors"
+                    className="flex flex-col overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all hover:scale-[1.02] bg-background/70 backdrop-blur"
                   >
                     <div className="aspect-video bg-accent relative overflow-hidden">
                       {song.youtubeId ? (
@@ -62,33 +86,37 @@ export function FullDiscography() {
                           className="border-0"
                         ></iframe>
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <p className="text-sm text-accent-foreground">
+                        <div className="w-full h-full flex items-center justify-center bg-muted/50">
+                          <p className="text-sm text-accent-foreground italic">
                             No official video available
                           </p>
                         </div>
                       )}
                     </div>
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-accent-foreground text-sm">
-                          {track.trackNumber}
+
+                    <CardHeader className="p-5">
+                      <div className="flex items-center gap-3">
+                        <span className="text-sm font-bold text-foreground bg-muted px-2 py-1 rounded-md">
+                          #{track.trackNumber}
                         </span>
                         <h3 className="text-xl font-bold">
                           {song.title.english}{" "}
-                          <span className="text-ado-key">
+                          <span className="text-ado-key text-lg font-medium">
                             ({song.title.japanese})
                           </span>
                         </h3>
                       </div>
-                      <p className="text-accent-foreground text-sm mb-2">
+                    </CardHeader>
+
+                    <CardContent className="p-5 pt-0 flex flex-col gap-2">
+                      <p className="text-muted-foreground text-sm">
                         {song.length} • {song.releaseDate}
                       </p>
-                      <p className="text-accent-foreground">
+                      <p className="text-accent-foreground text-sm">
                         {song.description}
                       </p>
-                    </div>
-                  </div>
+                    </CardContent>
+                  </Card>
                 );
               })}
             </div>

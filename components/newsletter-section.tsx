@@ -1,48 +1,69 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export function NewsletterSection() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-          Official Ado Newsletter
-        </h2>
-        <p className="text-accent-foreground mb-8 max-w-2xl mx-auto">
-          Stay updated with the latest news, releases, and tour dates directly
-          from Ado's official team.
-        </p>
+    <section className="relative py-16 bg-background overflow-hidden">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-ado-key/5 to-background opacity-20 pointer-events-none"></div>
 
-        <div className="bg-card border border-ado-key/20 rounded-lg p-6 max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold mb-4">
-            Subscribe to Ado's Official Newsletter
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-8"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
+            Official Ado Newsletter
+          </h2>
+          <p className="text-base text-accent-foreground max-w-xl mx-auto">
+            Stay updated with the latest news, releases, and events — straight
+            from Ado’s team.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="bg-card border border-ado-key/20 rounded-lg shadow-md p-6 max-w-xl mx-auto"
+        >
+          <h3 className="text-xl font-bold mb-4 text-foreground">
+            Subscribe Now
           </h3>
-          <p className="text-accent-foreground mb-6">
-            This link will take you to Ado's official newsletter signup page.
-            Please note that this is the official Ado newsletter, not affiliated
-            with this fan site.
+
+          <p className="text-accent-foreground mb-6 text-sm leading-relaxed">
+            You will be redirected to the official signup page managed by Ado's
+            team.
           </p>
 
           <Link
             href="https://umusic.jp/ado_nl"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block w-full"
           >
-            <Button className="bg-ado-key hover:bg-ado-key/80 cursor-grab">
+            <Button
+              size="default"
+              className="w-full bg-ado-key hover:bg-ado-key/90 text-white font-semibold transition-all duration-300"
+            >
               Subscribe to Official Newsletter
-              <ExternalLink className="ml-0 h-4 w-4" />
+              <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </Link>
 
-          <p className="text-xs text-accent-foreground mt-4">
-            By clicking this button, you will be redirected to the official Ado
-            newsletter signup page at{" "}
-            <span className="text-ado-key">umusic.jp/ado_nl</span>, which is
-            managed by Ado's official team.
+          <p className="text-xs text-muted-foreground mt-4">
+            Powered by <span className="text-ado-key">umusic.jp</span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

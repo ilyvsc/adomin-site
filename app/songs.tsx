@@ -199,4 +199,9 @@ export const featuredSongs = getSongs([
   "new-genesis",
 ]);
 
-export const timelineSongs = getSongs(["readymade", "usseewa"]);
+export const timelineSongs = getSongs([
+  "readymade",
+  "usseewa",
+  "gira-gira",
+  "new-genesis",
+]);

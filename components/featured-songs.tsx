@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { featuredSongs } from "@/app/songs";
 
 export function FeaturedSongs() {
@@ -17,9 +20,9 @@ export function FeaturedSongs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredSongs.map((song) => (
-            <div
+            <Card
               key={song.id}
-              className="space-y-4 bg-background/50 rounded-lg overflow-hidden hover:bg-background/80 transition-colors"
+              className="bg-background/50 hover:bg-background/80 transition-colors overflow-hidden"
             >
               <div className="aspect-video bg-accent relative overflow-hidden">
                 <iframe
@@ -32,16 +35,20 @@ export function FeaturedSongs() {
                   className="border-0"
                 ></iframe>
               </div>
-              <div className="p-4">
-                <h3 className="text-xl font-bold">
+              <CardHeader className="p-4">
+                <CardTitle className="text-xl font-bold">
                   {song.title.english}{" "}
-                  <span className="text-ado-key">({song.title.japanese})</span>
-                </h3>
-                <p className="text-accent-foreground mt-2">
+                  <span className="text-ado-key text-lg font-normal">
+                    ({song.title.japanese})
+                  </span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <p className="text-accent-foreground">
                   {song.description}
                 </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 

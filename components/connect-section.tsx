@@ -1,5 +1,8 @@
-import type React from "react";
+"use client";
+
+import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Card,
   CardDescription,
@@ -8,88 +11,121 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { officialLinks, fanLinks } from "@/app/constants";
-// import { Alert, AlertDescription } from "./ui/alert"
 
 export function ConnectSection() {
   return (
-    <section className="py-20 bg-ado-key/5">
+    <section className="py-20 bg-ado-key/5 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold mb-6 text-center text-foreground"
+        >
           Connect with Ado
-        </h2>
-        <p className="text-center text-accent-foreground mb-12 max-w-2xl mx-auto">
-          Follow Ado's official accounts for the latest updates or join fan
-          communities to connect with other fans.
-        </p>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-center text-accent-foreground mb-12 max-w-xl mx-auto"
+        >
+          Follow official accounts or join vibrant fan communities to celebrate
+          together!
+        </motion.p>
 
         <Tabs defaultValue="official" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="official">Official</TabsTrigger>
-            <TabsTrigger value="fan">Fan Communities</TabsTrigger>
-          </TabsList>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="flex justify-center mb-8"
+          >
+            <TabsList className="inline-flex gap-2 p-1 rounded-full bg-muted transition-all">
+              <TabsTrigger
+                value="official"
+                className="px-5 py-2 rounded-lg text-md font-semibold transition-all data-[state=active]:bg-ado-key/80 data-[state=active]:text-white"
+              >
+                Official
+              </TabsTrigger>
+              <TabsTrigger
+                value="fan"
+                className="px-5 py-2 rounded-lg text-md font-semibold transition-all data-[state=active]:bg-ado-key/80 data-[state=active]:text-white"
+              >
+                Fan Communities
+              </TabsTrigger>
+            </TabsList>
+          </motion.div>
 
-          <TabsContent value="official" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <TabsContent value="official" className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {officialLinks.map((link) => (
-                <Link
+                <motion.div
                   key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-ado-key hover:text-ado-key/80 transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.4 }}
+                  className="h-full"
                 >
-                  <Card
-                    key={link.name}
-                    className="overflow-hidden bg-card hover:bg-card/80 transition-colors border-ado-key/20 hover:border-ado-key/40 h-full"
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
-                    <CardHeader className="pb-6 h-full flex flex-col justify-between">
-                      <CardTitle className="flex items-center text-lg">
-                        {link.icon}
-                        <span className="ml-2">{link.name}</span>
-                      </CardTitle>
-                      <CardDescription>{link.description}</CardDescription>
-                    </CardHeader>
-                  </Card>
-                </Link>
+                    <Card className="flex flex-col justify-between h-full overflow-hidden bg-card hover:bg-card/90 transition-colors border-ado-key/20 hover:border-ado-key/40 shadow-sm hover:shadow-md">
+                      <CardHeader className="flex flex-col gap-2">
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                          {link.icon}
+                          <span className="break-words">{link.name}</span>
+                        </CardTitle>
+                        <CardDescription className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                          {link.description}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </TabsContent>
 
-          <TabsContent value="fan" className="mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <TabsContent value="fan" className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {fanLinks.map((link) => (
-                <Link
+                <motion.div
                   key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-ado-key hover:text-ado-key/80 transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.4 }}
+                  className="h-full"
                 >
-                  <Card className="overflow-hidden bg-card hover:bg-card/80 transition-colors border-ado-key/20 hover:border-ado-key/40 h-full">
-                    <CardHeader className="pb-6 h-full flex flex-col justify-between">
-                      <CardTitle className="flex items-center text-lg">
-                        {link.icon}
-                        <span className="ml-2">{link.name}</span>
-                      </CardTitle>
-                      <CardDescription>{link.description}</CardDescription>
-                    </CardHeader>
-                  </Card>
-                </Link>
+                  <Link
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                  >
+                    <Card className="flex flex-col justify-between h-full overflow-hidden bg-card hover:bg-card/90 transition-colors border-ado-key/20 hover:border-ado-key/40 shadow-sm hover:shadow-md">
+                      <CardHeader className="flex flex-col gap-2">
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                          {link.icon}
+                          <span className="break-words">{link.name}</span>
+                        </CardTitle>
+                        <CardDescription className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                          {link.description}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </TabsContent>
         </Tabs>
-
-        {/* <div className="mt-12 text-center text-sm text-accent-foreground max-w-2xl mx-auto">
-          <div className="w-full lg:min-w-3/4">
-            <Alert className="mb-6">
-              <AlertDescription>
-                This is a fan-made website created to express appreciation for Ado's music. It is not affiliated with,
-                endorsed by, or connected to Ado or her management.
-              </AlertDescription>
-            </Alert>
-          </div>
-        </div> */}
       </div>
     </section>
   );
