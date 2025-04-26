@@ -111,9 +111,9 @@ export function DiscographyTimeline() {
                             {song.description}
                           </p>
                           <Button
-                            variant="ghost"
+                            variant="destructive"
                             size="sm"
-                            className="text-ado-key hover:text-ado-key/80"
+                            className="bg-ado-blue text-ado-white hover:bg-ado-blue/80"
                             onClick={() => handleSongClick(song)}
                           >
                             View Details

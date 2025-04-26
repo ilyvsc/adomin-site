@@ -11,7 +11,7 @@ export default function DiscographyPage() {
         <div className="mb-8">
           <Link
             href="/"
-            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+            className="inline-flex items-center text-ado-key hover:text-ado-key/80 transition-colors"
           >
             <ChevronLeft className="mr-2 h-4 w-4" />
             Back to Home
