@@ -45,7 +45,7 @@
     --color-ado-white: hsl(0 0% 98%);
     --color-ado-blue: hsl(196 100% 65%);
     --color-ado-red: hsl(0, 100%, 57%);
-    --color-ado-key: var(--color-ado-red)
+    --color-ado-key: var(--color-ado-red);
   }
 
   * {
