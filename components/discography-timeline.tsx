@@ -76,9 +76,6 @@ export function DiscographyTimeline() {
                           isLeft ? "md:flex-row" : "md:flex-row-reverse"
                         } gap-8`}
                       >
-                        {/* Timeline dot */}
-                        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-ado-key rounded-full z-10"></div>
-
                         {/* Video */}
                         <div className="w-full md:w-1/2">
                           <div className="bg-background/60 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all hover:scale-[1.015]">

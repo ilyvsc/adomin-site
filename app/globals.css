@@ -42,7 +42,7 @@
     --color-destructive: hsl(0 62% 51%);
     --color-border: hsl(240 5.9% 30%);
     --color-ado-white: hsl(0 0% 98%);
-    --color-ado-blue: 		hsl(230, 100%, 60%);
+    --color-ado-blue: hsl(230, 100%, 60%);
     --color-ado-red: hsl(0, 100%, 57%);
     --color-ado-key: var(--color-ado-blue);
   }

@@ -97,7 +97,8 @@ export const songs: Song[] = [
     description:
       "A melancholic yet powerful song that demonstrates Ado's ability to convey deep emotions.",
     youtubeId: "cSgZxz3le7s",
-    coverArt: "https://i.scdn.co/image/ab67616d0000b273cb04d918042b247b265022a9",
+    coverArt:
+      "https://i.scdn.co/image/ab67616d0000b273cb04d918042b247b265022a9",
     lyrics: { japanese: "", romaji: "", english: "" },
   },
   {
@@ -135,7 +136,8 @@ export const songs: Song[] = [
       "The opening theme for the One Piece Film: Red, demonstrating Ado's incredible vocal power.",
     youtubeId: "1FliVTcX8bQ",
     lyrics: { japanese: "", romaji: "", english: "" },
-    coverArt: "https://i.scdn.co/image/ab67616d0000b273f24f7db074ee5a9042ecb9a2",
+    coverArt:
+      "https://i.scdn.co/image/ab67616d0000b273f24f7db074ee5a9042ecb9a2",
   },
   {
     id: "backlight",
@@ -146,7 +148,8 @@ export const songs: Song[] = [
     description:
       "Another song from the One Piece Film: Red soundtrack, showcasing Ado's emotional range.",
     youtubeId: "gt-v_YCkaMY",
-    coverArt: "https://i.scdn.co/image/ab67616d0000b2736ba460b21288fc379f941d60",
+    coverArt:
+      "https://i.scdn.co/image/ab67616d0000b2736ba460b21288fc379f941d60",
     lyrics: { japanese: "", romaji: "", english: "" },
   },
 ];
@@ -176,7 +179,8 @@ export const albums: Album[] = [
     },
     releaseDate: "2022-01-01",
     type: "album",
-    coverArt: "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    coverArt:
+      "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
     tracks: [
       { songId: "new-genesis", trackNumber: 1 },
       { songId: "backlight", trackNumber: 3 },

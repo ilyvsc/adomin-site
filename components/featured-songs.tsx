@@ -44,9 +44,7 @@ export function FeaturedSongs() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 pt-0">
-                <p className="text-accent-foreground">
-                  {song.description}
-                </p>
+                <p className="text-accent-foreground">{song.description}</p>
               </CardContent>
             </Card>
           ))}
