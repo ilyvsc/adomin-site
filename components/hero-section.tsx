@@ -57,7 +57,7 @@ export function HeroSection() {
               move: { enable: true, speed: 0.3 },
               opacity: { value: 0.3 },
               links: { enable: false },
-              color: { value: "#f43f5e" },
+              color: { value: "#FFF" },
             },
             interactivity: {
               events: {
