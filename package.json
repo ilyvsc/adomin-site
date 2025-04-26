@@ -68,8 +68,15 @@
     "@types/node": "^22.15.2",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
     "eslint": "^9.25.1",
     "eslint-config-next": "^15.3.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3"
   }

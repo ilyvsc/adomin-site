@@ -1,58 +1,19 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-
-interface Song {
-  id: string
-  title: {
-    english: string
-    japanese: string
-  }
-  description: string
-  youtubeId: string
-}
-
-const featuredSongs: Song[] = [
-  {
-    id: "usseewa",
-    title: {
-      english: "Usseewa",
-      japanese: "うっせぇわ",
-    },
-    description:
-      "Ado's breakthrough hit that catapulted her to fame with its raw emotion and powerful vocals addressing societal pressures.",
-    youtubeId: "Qp3b-RXtz4w",
-  },
-  {
-    id: "readymade",
-    title: {
-      english: "Readymade",
-      japanese: "レディメイド",
-    },
-    description: "A high-energy track showcasing Ado's versatile vocal range and expressive delivery style.",
-    youtubeId: "jg09lNupc1s",
-  },
-  {
-    id: "new-genesis",
-    title: {
-      english: "New Genesis",
-      japanese: "新時代",
-    },
-    description:
-      "The opening theme for the One Piece Film: Red, demonstrating Ado's incredible vocal power and emotional depth.",
-    youtubeId: "1FliVTcX8bQ",
-  },
-]
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { featuredSongs } from "@/app/songs";
 
 export function FeaturedSongs() {
   return (
     <section className="py-20 bg-ado-key/5">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">Featured Songs</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">
+          Featured Songs
+        </h2>
         <p className="text-center text-accent-foreground mb-12 max-w-2xl mx-auto">
-          Explore some of Ado's most popular and influential songs that showcase her incredible vocal talent and
-          emotional depth.
+          Explore some of Ado's most popular and influential songs that showcase
+          her incredible vocal talent and emotional depth.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -74,9 +35,12 @@ export function FeaturedSongs() {
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-bold">
-                  {song.title.english} <span className="text-ado-key">({song.title.japanese})</span>
+                  {song.title.english}{" "}
+                  <span className="text-ado-key">({song.title.japanese})</span>
                 </h3>
-                <p className="text-accent-foreground mt-2">{song.description}</p>
+                <p className="text-accent-foreground mt-2">
+                  {song.description}
+                </p>
               </div>
             </div>
           ))}
@@ -84,12 +48,16 @@ export function FeaturedSongs() {
 
         <div className="text-center">
           <Link href="/discography">
-            <Button variant="default" size="lg" className="bg-ado-key hover:bg-ado-key/80">
+            <Button
+              variant="default"
+              size="lg"
+              className="bg-ado-key hover:bg-ado-key/80"
+            >
               View Full Discography
             </Button>
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }
