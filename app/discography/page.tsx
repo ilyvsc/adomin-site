@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { FullDiscography } from "@/components/full-discography";
 import { Footer } from "@/components/footer";

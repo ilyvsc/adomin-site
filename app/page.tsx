@@ -1,3 +1,4 @@
+import React from "react";
 import { HeroSection } from "@/components/hero-section";
 import { FanAppreciation } from "@/components/fan-appreciation";
 import { FeaturedSongs } from "@/components/featured-songs";

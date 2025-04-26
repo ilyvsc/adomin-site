@@ -1,3 +1,5 @@
+import React from "react";
+
 export function FanAppreciation() {
   return (
     <section className="py-20 bg-background">

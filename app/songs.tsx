@@ -70,7 +70,7 @@ export const songs: Song[] = [
     releaseDate: "2021-04-26",
     description:
       "A powerful song that showcases Ado's incredible vocal range and emotional delivery.",
-    youtubeId: "EEbWRjavSVw",
+    youtubeId: "sOiMD45QGLs",
     coverArt:
       "https://i.scdn.co/image/ab67616d0000b273a017946e3afa6b0d4e7eb123",
     lyrics: { japanese: "", romaji: "", english: "" },

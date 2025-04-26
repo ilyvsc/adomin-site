@@ -1,7 +1,7 @@
-"use client";
-
+import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { albums, songs } from "@/app/songs";
+import Image from "next/image";
 
 function getSongById(id: string) {
   return songs.find((song) => song.id === id);
@@ -23,10 +23,11 @@ export function FullDiscography() {
           <TabsContent key={album.id} value={album.id} className="mt-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="aspect-square relative overflow-hidden rounded-lg">
-                <img
+                <Image
                   src={album.coverArt || "/placeholder.svg"}
                   alt={`${album.title.english} album cover`}
                   className="object-cover w-full h-full"
+                  fill
                 />
               </div>
               <div className="md:col-span-2">
