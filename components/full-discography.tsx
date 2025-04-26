@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { albums, songs } from "@/app/songs";
 import Image from "next/image";
+import React from "react";
+import { albums, songs } from "@/app/songs";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function getSongById(id: string) {
   return songs.find((song) => song.id === id) || null;

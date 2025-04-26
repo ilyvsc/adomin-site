@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { Quote } from "lucide-react";
 import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+import React from "react";
 
 export function FanAppreciation() {
   return (

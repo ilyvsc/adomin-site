@@ -1,5 +1,3 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSquareXTwitter,
   faInstagram,
@@ -8,7 +6,9 @@ import {
   faDiscord,
   faReddit,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Globe } from "lucide-react";
+import React from "react";
 
 interface SocialLink {
   name: string;

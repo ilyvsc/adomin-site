@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import React from "react";
+import { officialLinks, fanLinks } from "@/app/constants";
 import {
   Card,
   CardDescription,
@@ -10,7 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { officialLinks, fanLinks } from "@/app/constants";
 
 export function ConnectSection() {
   return (

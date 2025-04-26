@@ -1,7 +1,8 @@
-import type { ReactNode } from "react";
+import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import clsx from "clsx";
+import type { ReactNode } from "react";
+import React from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 

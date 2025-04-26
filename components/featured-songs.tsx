@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
+import React from "react";
+import { featuredSongs } from "@/app/songs";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { featuredSongs } from "@/app/songs";
 
 export function FeaturedSongs() {
   return (
