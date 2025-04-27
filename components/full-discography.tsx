@@ -15,12 +15,12 @@ export function FullDiscography() {
     <div className="space-y-16">
       <Tabs defaultValue={albums[0].id} className="w-full">
         {/* Album Tabs */}
-        <TabsList className="inline-flex items-center justify-center flex-wrap gap-2 px-4 py-2 rounded-lg bg-muted mx-auto">
+        <TabsList className="bg-muted mx-auto inline-flex flex-wrap items-center justify-center gap-2 rounded-lg px-4 py-2">
           {albums.map((album) => (
             <TabsTrigger
               key={album.id}
               value={album.id}
-              className="px-4 py-2 text-sm font-medium rounded-md transition-colors bg-background hover:bg-muted data-[state=active]:bg-ado-key data-[state=active]:text-white"
+              className="hover:bg-muted rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors data-[state=active]:bg-ado-key data-[state=active]:text-white"
             >
               {album.title.english}
             </TabsTrigger>
@@ -34,13 +34,13 @@ export function FullDiscography() {
             className="mt-10 space-y-12"
           >
             {/* Album Header */}
-            <div className="flex flex-col md:flex-row items-start gap-8">
+            <div className="flex flex-col items-start gap-8 md:flex-row">
               {/* Album image */}
-              <div className="relative h-40 w-40 md:h-48 md:w-48 rounded-xl overflow-hidden shadow-lg shrink-0">
+              <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-xl shadow-lg md:h-48 md:w-48">
                 <Image
                   src={album.coverArt || "/placeholder.svg"}
                   alt={`${album.title.english} album cover`}
-                  className="object-cover w-full h-full"
+                  className="h-full w-full object-cover"
                   fill
                   priority
                 />
@@ -48,13 +48,13 @@ export function FullDiscography() {
 
               {/* Album text */}
               <div className="flex flex-col justify-center">
-                <h2 className="text-4xl font-extrabold mb-4">
+                <h2 className="mb-4 text-4xl font-extrabold">
                   {album.title.english}{" "}
-                  <span className="text-ado-key text-2xl font-medium">
+                  <span className="text-2xl font-medium text-ado-key">
                     ({album.title.japanese})
                   </span>
                 </h2>
-                <p className="text-accent-foreground text-lg">
+                <p className="text-lg text-accent-foreground">
                   Released:{" "}
                   <span className="font-semibold">{album.releaseDate}</span> •{" "}
                   <span className="font-semibold">{album.tracks.length}</span>{" "}
@@ -64,7 +64,7 @@ export function FullDiscography() {
             </div>
 
             {/* Track Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
               {album.tracks.map((track) => {
                 const song = getSongById(track.songId);
                 if (!song) return null;
@@ -72,9 +72,9 @@ export function FullDiscography() {
                 return (
                   <Card
                     key={track.songId}
-                    className="flex flex-col overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all hover:scale-[1.02] bg-background/70 backdrop-blur"
+                    className="flex flex-col overflow-hidden rounded-2xl bg-background/70 shadow-md backdrop-blur transition-all hover:scale-[1.02] hover:shadow-xl"
                   >
-                    <div className="aspect-video bg-accent relative overflow-hidden">
+                    <div className="relative aspect-video overflow-hidden bg-accent">
                       {song.youtubeId ? (
                         <iframe
                           width="100%"
@@ -86,7 +86,7 @@ export function FullDiscography() {
                           className="border-0"
                         ></iframe>
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-muted/50">
+                        <div className="bg-muted/50 flex h-full w-full items-center justify-center">
                           <p className="text-sm text-accent-foreground italic">
                             No official video available
                           </p>
@@ -96,23 +96,23 @@ export function FullDiscography() {
 
                     <CardHeader className="p-5">
                       <div className="flex items-center gap-3">
-                        <span className="text-sm font-bold text-foreground bg-muted px-2 py-1 rounded-md">
+                        <span className="bg-muted rounded-md px-2 py-1 text-sm font-bold text-foreground">
                           #{track.trackNumber}
                         </span>
                         <h3 className="text-xl font-bold">
                           {song.title.english}{" "}
-                          <span className="text-ado-key text-lg font-medium">
+                          <span className="text-lg font-medium text-ado-key">
                             ({song.title.japanese})
                           </span>
                         </h3>
                       </div>
                     </CardHeader>
 
-                    <CardContent className="p-5 pt-0 flex flex-col gap-2">
-                      <p className="text-muted-foreground text-sm">
+                    <CardContent className="flex flex-col gap-2 p-5 pt-0">
+                      <p className="text-sm text-muted-foreground">
                         {song.length} • {song.releaseDate}
                       </p>
-                      <p className="text-accent-foreground text-sm">
+                      <p className="text-sm text-accent-foreground">
                         {song.description}
                       </p>
                     </CardContent>

@@ -11,15 +11,15 @@ export default function DiscographyPage() {
         <div className="mb-8">
           <Link
             href="/"
-            className="inline-flex items-center text-ado-key hover:text-ado-key/80 transition-colors"
+            className="inline-flex items-center text-ado-key transition-colors hover:text-ado-key/80"
           >
             <ChevronLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold mt-4 text-foreground">
+          <h1 className="mt-4 text-4xl font-bold text-foreground md:text-5xl">
             Ado's Complete Discography
           </h1>
-          <p className="text-muted-foreground mt-2">
+          <p className="mt-2 text-muted-foreground">
             A comprehensive collection of Ado's music, organized by album and
             release date.
           </p>

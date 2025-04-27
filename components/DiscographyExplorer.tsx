@@ -31,18 +31,18 @@ export function DiscographyExplorer() {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="bg-background py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
+        <h2 className="mb-12 text-center text-4xl font-bold text-foreground md:text-5xl">
           Discography Explorer
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {albums.map((album) => (
             <div key={album.id} className="relative">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="cursor-pointer bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+                className="cursor-pointer overflow-hidden rounded-lg bg-card shadow-lg transition-all hover:shadow-2xl"
                 onClick={() => handleAlbumClick(album.id)}
               >
                 <div className="relative aspect-square overflow-hidden">
@@ -57,7 +57,7 @@ export function DiscographyExplorer() {
                   <h3 className="text-xl font-bold text-foreground">
                     {album.title.english}
                   </h3>
-                  <p className="text-accent-foreground text-sm">
+                  <p className="text-sm text-accent-foreground">
                     {album.releaseDate}
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export function DiscographyExplorer() {
       {/* Modal for expanded album view */}
       {openAlbumId && (
         <Dialog open={!!openAlbumId} onOpenChange={handleClose}>
-          <DialogContent className="max-w-3xl p-6 overflow-y-auto max-h-[80vh]">
+          <DialogContent className="max-h-[80vh] max-w-3xl overflow-y-auto p-6">
             {albums
               .filter((album) => album.id === openAlbumId)
               .map((album) => (
@@ -84,18 +84,18 @@ export function DiscographyExplorer() {
                     </DialogDescription>
                   </DialogHeader>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                  <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {album.tracks.map((track) => {
                       const song = getSongById(track.songId);
                       if (!song) return null;
 
                       return (
                         <div key={track.songId} className="space-y-2">
-                          <p className="text-foreground text-sm font-semibold truncate">
+                          <p className="truncate text-sm font-semibold text-foreground">
                             {track.trackNumber}. {song.title.english} (
                             {song.title.japanese})
                           </p>
-                          <div className="aspect-[16/9] rounded-md overflow-hidden">
+                          <div className="aspect-[16/9] overflow-hidden rounded-md">
                             <iframe
                               width="100%"
                               height="100%"
@@ -111,7 +111,7 @@ export function DiscographyExplorer() {
                     })}
                   </div>
 
-                  <DialogClose className="absolute right-4 top-4">
+                  <DialogClose className="absolute top-4 right-4">
                     <span className="sr-only">Close</span>
                   </DialogClose>
                 </div>

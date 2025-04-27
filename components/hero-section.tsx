@@ -30,7 +30,7 @@ export function HeroSection() {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-background dark:bg-black"
+      className="relative flex h-screen items-center justify-center overflow-hidden bg-background dark:bg-black"
     >
       {/* Background layers */}
       <motion.div
@@ -46,7 +46,7 @@ export function HeroSection() {
             alt="Ado Mobile Visual"
             fill
             priority
-            className="object-cover w-full h-full brightness-75 dark:brightness-50 blur-md"
+            className="h-full w-full object-cover blur-md brightness-75 dark:brightness-50"
           />
         </div>
         <div className="hidden md:block">
@@ -55,27 +55,27 @@ export function HeroSection() {
             alt="Ado Desktop Visual"
             fill
             priority
-            className="object-cover w-full h-full brightness-75 dark:brightness-50 blur-md"
+            className="h-full w-full object-cover blur-md brightness-75 dark:brightness-50"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 dark:via-black/30 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-background dark:via-black/30"></div>
       </motion.div>
 
       {/* Foreground content */}
       <motion.div
         variants={containerVariants}
-        className="z-20 text-center px-6"
+        className="z-20 px-6 text-center"
       >
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground dark:text-white drop-shadow-lg"
+          className="text-4xl font-extrabold tracking-tight text-foreground drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl dark:text-white"
         >
           <span className="text-ado-key">Ado</span> — The Voice That Shook Japan
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="mt-6 text-xl md:text-2xl text-accent-foreground dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-accent-foreground md:text-2xl dark:text-gray-300"
         >
           A force of nature. A whirlwind of raw emotion. A voice that defies
           expectations and leaves hearts trembling in its wake.

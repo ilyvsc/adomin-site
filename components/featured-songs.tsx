@@ -8,23 +8,23 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export function FeaturedSongs() {
   return (
-    <section className="py-20 bg-ado-key/5">
+    <section className="bg-ado-key/5 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-foreground">
+        <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">
           Featured Songs
         </h2>
-        <p className="text-center text-accent-foreground mb-12 max-w-2xl mx-auto">
+        <p className="mx-auto mb-12 max-w-2xl text-center text-accent-foreground">
           Explore some of Ado's most popular and influential songs that showcase
           her incredible vocal talent and emotional depth.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {featuredSongs.map((song) => (
             <Card
               key={song.id}
-              className="bg-background/50 hover:bg-background/80 transition-colors overflow-hidden"
+              className="overflow-hidden bg-background/50 transition-colors hover:bg-background/80"
             >
-              <div className="aspect-video bg-accent relative overflow-hidden">
+              <div className="relative aspect-video overflow-hidden bg-accent">
                 <iframe
                   width="100%"
                   height="100%"
@@ -38,7 +38,7 @@ export function FeaturedSongs() {
               <CardHeader className="p-4">
                 <CardTitle className="text-xl font-bold">
                   {song.title.english}{" "}
-                  <span className="text-ado-key text-lg font-normal">
+                  <span className="text-lg font-normal text-ado-key">
                     ({song.title.japanese})
                   </span>
                 </CardTitle>
