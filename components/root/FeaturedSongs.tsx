@@ -24,7 +24,7 @@ export function FeaturedSongs() {
           {featuredSongs.map((song) => (
             <Card
               key={song.id}
-              className="overflow-hidden bg-background/50 transition-colors hover:bg-background/80"
+              className="overflow-hidden bg-background/50 transition-colors hover:bg-background/80 gap-0 py-0"
             >
               <div className="relative aspect-video overflow-hidden bg-accent">
                 <iframe
@@ -35,9 +35,10 @@ export function FeaturedSongs() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="border-0"
-                ></iframe>
+                />
               </div>
-              <CardHeader className="p-4">
+
+              <CardHeader className="px-4 pt-4 pb-2">
                 <CardTitle className="text-xl font-bold">
                   {song.title.english}{" "}
                   <span className="text-lg font-normal text-ado-key">
@@ -45,6 +46,7 @@ export function FeaturedSongs() {
                   </span>
                 </CardTitle>
               </CardHeader>
+
               <CardContent className="p-4 pt-0">
                 <p className="text-accent-foreground">{song.description}</p>
               </CardContent>

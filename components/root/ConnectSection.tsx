@@ -42,9 +42,9 @@ export function ConnectSection() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mb-8 flex justify-center"
+            className="flex justify-center"
           >
-            <TabsList className="bg-muted inline-flex gap-2 rounded-full p-1 transition-all">
+            <TabsList className="inline-flex h-14 items-center justify-center p-2">
               <TabsTrigger
                 value="official"
                 className="text-md rounded-lg px-5 py-2 font-semibold transition-all data-[state=active]:bg-ado-key/80 data-[state=active]:text-white"
