@@ -1,8 +1,10 @@
 "use client";
 
+import { albums, songs } from "@/constants/MusicData";
+
 import Image from "next/image";
 import React from "react";
-import { albums, songs } from "@/app/songs";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 

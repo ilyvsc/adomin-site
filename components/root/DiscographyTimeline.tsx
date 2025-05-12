@@ -1,17 +1,20 @@
 "use client";
 
+import { Song, timelineSongs } from "@/constants/MusicData";
+
 import React, { useState } from "react";
-import { Button } from "./ui/button";
-import { Song, timelineSongs } from "@/app/songs";
+
 import {
   Dialog,
+  DialogClose,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
-  DialogClose,
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { Button } from "@/components/ui/button";
 
 export function DiscographyTimeline() {
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);

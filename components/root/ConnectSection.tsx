@@ -1,9 +1,11 @@
 "use client";
 
+import { fanLinks, officialLinks } from "@/constants/SocialLinks";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
-import { officialLinks, fanLinks } from "@/app/constants";
+
 import {
   Card,
   CardDescription,

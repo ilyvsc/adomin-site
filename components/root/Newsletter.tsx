@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+
 import { Button } from "@/components/ui/button";
 
 export function NewsletterSection() {

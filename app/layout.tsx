@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 import React from "react";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+
+import { ThemeProvider } from "@/utils/providers/ThemeProvider";
+
+import "@/styles/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],

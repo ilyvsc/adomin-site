@@ -2,18 +2,24 @@
 
 "use client";
 
+import { albums, songs } from "@/constants/MusicData";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
-import { albums, songs } from "@/app/songs";
+
 import {
   Dialog,
+  DialogClose,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
-  DialogClose,
 } from "@/components/ui/dialog";
+
+// components/DiscographyExplorer.tsx
+
+// components/DiscographyExplorer.tsx
 
 function getSongById(id: string) {
   return songs.find((song) => song.id === id);

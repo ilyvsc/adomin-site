@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useInView, useAnimation, Variants } from "framer-motion";
+import { Variants, motion, useAnimation, useInView } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const containerVariants: Variants = {
   hidden: {},

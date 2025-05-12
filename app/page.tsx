@@ -1,11 +1,12 @@
 import React from "react";
-import { ConnectSection } from "@/components/connect-section";
-import { DiscographyTimeline } from "@/components/discography-timeline";
-import { FanAppreciation } from "@/components/fan-appreciation";
-import { FeaturedSongs } from "@/components/featured-songs";
-import { Footer } from "@/components/footer";
-import { HeroSection } from "@/components/hero-section";
-import { NewsletterSection } from "@/components/newsletter-section";
+
+import { Footer } from "@/components/layout/Footer";
+import { FanAppreciation } from "@/components/root/AppreciationNote";
+import { ConnectSection } from "@/components/root/ConnectSection";
+import { DiscographyTimeline } from "@/components/root/DiscographyTimeline";
+import { FeaturedSongs } from "@/components/root/FeaturedSongs";
+import { HeroSection } from "@/components/root/HeroSection";
+import { NewsletterSection } from "@/components/root/Newsletter";
 
 export default function Home() {
   return (
