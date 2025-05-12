@@ -1,12 +1,12 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
-
 import tseslint from "@typescript-eslint/eslint-plugin";
+
 import importPlugin from "eslint-plugin-import";
 import nPlugin from "eslint-plugin-n";
 import promisePlugin from "eslint-plugin-promise";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+
 import { Button } from "@/components/ui/button";
 
 export function NewsletterSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-16">
-      {/* Subtle background */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ado-key/5 to-background opacity-20"></div>
+    <section className="relative overflow-hidden bg-background py-20 sm:py-24">
+      <div className="absolute h-96 w-96 rounded-full bg-ado-key/30 blur-3xl opacity-20 pointer-events-none"></div>
 
       <div className="relative z-10 container mx-auto px-4">
         <motion.div
@@ -18,10 +18,12 @@ export function NewsletterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-8 text-center"
+          className="mb-12 text-center"
         >
+          <Mail className="mx-auto mb-4 h-12 w-12 text-ado-key drop-shadow" />
+
           <h2 className="mb-3 text-3xl font-bold text-foreground md:text-4xl">
-            Official Ado Newsletter
+            Ado Newsletter
           </h2>
           <p className="mx-auto max-w-xl text-base text-accent-foreground">
             Stay updated with the latest news, releases, and events — straight
@@ -34,13 +36,13 @@ export function NewsletterSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mx-auto max-w-xl rounded-lg border border-ado-key/20 bg-card p-6 shadow-md"
+          className="mx-auto max-w-xl rounded-2xl border border-ado-key/30 bg-card p-8 shadow-xl backdrop-blur-md transition-shadow hover:shadow-2xl"
         >
-          <h3 className="mb-4 text-xl font-bold text-foreground">
+          <h3 className="mb-4 text-2xl text-center font-bold text-foreground">
             Subscribe Now
           </h3>
 
-          <p className="mb-6 text-sm leading-relaxed text-accent-foreground">
+          <p className="mb-6 text-sm text-center leading-relaxed text-accent-foreground">
             You will be redirected to the official signup page managed by Ado's
             team.
           </p>
@@ -53,14 +55,14 @@ export function NewsletterSection() {
           >
             <Button
               size="default"
-              className="w-full bg-ado-key font-semibold text-white transition-all duration-300 hover:bg-ado-key/90"
+              className="w-full bg-ado-key font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-ado-key/90"
             >
               Subscribe to Official Newsletter
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </Link>
 
-          <p className="mt-4 text-xs text-muted-foreground">
+          <p className="mt-4 text-xs text-center text-muted-foreground">
             Powered by <span className="text-ado-key">umusic.jp</span>
           </p>
         </motion.div>

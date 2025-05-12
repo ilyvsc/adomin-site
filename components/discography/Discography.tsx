@@ -1,8 +1,10 @@
 "use client";
 
+import { albums, songs } from "@/constants/MusicData";
+
 import Image from "next/image";
 import React from "react";
-import { albums, songs } from "@/app/songs";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -15,12 +17,15 @@ export function FullDiscography() {
     <div className="space-y-16">
       <Tabs defaultValue={albums[0].id} className="w-full">
         {/* Album Tabs */}
-        <TabsList className="bg-muted mx-auto inline-flex flex-wrap items-center justify-center gap-2 rounded-lg px-4 py-2">
+        <TabsList className="mx-auto flex flex-wrap justify-left gap-2 p-2">
           {albums.map((album) => (
             <TabsTrigger
               key={album.id}
               value={album.id}
-              className="hover:bg-muted rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors data-[state=active]:bg-ado-key data-[state=active]:text-white"
+              className="
+                rounded-md border border-foreground/20 bg-transparent p-4 text-sm font-semibold text-foreground
+                transition-colors hover:bg-foreground/10 data-[state=active]:border-ado-key data-[state=active]:bg-ado-key data-[state=active]:text-white
+            "
             >
               {album.title.english}
             </TabsTrigger>
@@ -72,7 +77,7 @@ export function FullDiscography() {
                 return (
                   <Card
                     key={track.songId}
-                    className="flex flex-col overflow-hidden rounded-2xl bg-background/70 shadow-md backdrop-blur transition-all hover:scale-[1.02] hover:shadow-xl"
+                    className="flex flex-col overflow-hidden rounded-2xl bg-background/70 shadow-md backdrop-blur transition-all hover:scale-[1.02] hover:shadow-xl gap-0 py-0"
                   >
                     <div className="relative aspect-video overflow-hidden bg-accent">
                       {song.youtubeId ? (

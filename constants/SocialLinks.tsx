@@ -1,12 +1,13 @@
 import {
-  faSquareXTwitter,
-  faInstagram,
-  faYoutube,
-  faSpotify,
   faDiscord,
+  faInstagram,
   faReddit,
+  faSpotify,
+  faSquareXTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Globe } from "lucide-react";
 import React from "react";
 
