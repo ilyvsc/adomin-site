@@ -4,6 +4,7 @@ import { Song, timelineSongs } from "@/constants/MusicData";
 
 import React, { useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -12,9 +13,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { Button } from "@/components/ui/button";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function DiscographyTimeline() {
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
@@ -111,9 +111,9 @@ export function DiscographyTimeline() {
                             {song.description}
                           </p>
                           <Button
-                            variant="destructive"
-                            size="sm"
-                            className="bg-ado-blue text-ado-white hover:bg-ado-blue/80"
+                            variant="default"
+                            size="default"
+                            className="h-9 bg-ado-key text-ado-white hover:bg-ado-key/80"
                             onClick={() => handleSongClick(song)}
                           >
                             View Details
@@ -131,7 +131,7 @@ export function DiscographyTimeline() {
 
       {/* Song details modal */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-3xl rounded-xl bg-background/90 shadow-2xl backdrop-blur-md">
+        <DialogContent className="sm:max-w-2xl lg:max-w-4xl xl:max-w-5/6xl rounded-xl bg-background/90 shadow-2xl backdrop-blur-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-2xl">
               {selectedSong?.title.english}{" "}
@@ -139,10 +139,12 @@ export function DiscographyTimeline() {
                 ({selectedSong?.title.japanese})
               </span>
             </DialogTitle>
-            <DialogDescription>
+
+            <DialogDescription className="text-left text-sm">
               Released: {selectedSong?.releaseDate}
             </DialogDescription>
           </DialogHeader>
+
           <div className="mt-4">
             <p className="mb-6 text-accent-foreground">
               {selectedSong?.description}
@@ -161,9 +163,10 @@ export function DiscographyTimeline() {
               )}
             </div>
 
-            <h4 className="mb-2 text-lg font-semibold">Lyrics</h4>
-            <Tabs defaultValue="japanese" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
+            {/* TODO: refactor lyrics section... */}
+            {/* <h4 className="mb-2 text-lg font-semibold">Lyrics</h4>
+            <Tabs defaultValue="japanese">
+              <TabsList className="grid grid-cols-3 w-full items-center justify-center p-2">
                 <TabsTrigger value="japanese">Japanese</TabsTrigger>
                 <TabsTrigger value="romaji">Romaji</TabsTrigger>
                 <TabsTrigger value="english">English</TabsTrigger>
@@ -181,7 +184,7 @@ export function DiscographyTimeline() {
               <TabsContent value="english" className="mt-4 whitespace-pre-line">
                 {selectedSong?.lyrics.english}
               </TabsContent>
-            </Tabs>
+            </Tabs> */}
           </div>
 
           <DialogClose className="absolute top-4 right-4">
