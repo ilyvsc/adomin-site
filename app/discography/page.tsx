@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { FullDiscography } from "@/components/discography/full-discography";
+import { FullDiscography } from "@/components/discography/Discography";
 import { Footer } from "@/components/layout/Footer";
 
 export default function DiscographyPage() {
