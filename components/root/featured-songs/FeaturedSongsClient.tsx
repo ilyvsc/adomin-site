@@ -7,11 +7,17 @@ import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { featuredSongs } from "@/constants/MusicData";
+import { Song } from "@/types/Music";
 
 import { NicoNicoPlayer, YouTubePlayer } from "@/utils/VideoEmbed";
 
-export function FeaturedSongs() {
+interface FeaturedSongsClientProps {
+  songs: Song[];
+}
+
+export function FeaturedSongsClient({
+  songs,
+}: Readonly<FeaturedSongsClientProps>) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -75,7 +81,7 @@ export function FeaturedSongs() {
           animate={isInView ? "visible" : "hidden"}
           className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
-          {featuredSongs.map((song) => (
+          {songs.map((song) => (
             <motion.div
               key={song.id}
               variants={itemVariants}
