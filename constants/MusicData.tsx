@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-import { Album, AlbumTrack, Song, SongsByYear } from "@/types/Music";
+import { Album, Song } from "@/types/Music";
 
 const prisma = new PrismaClient();
 
@@ -63,18 +63,45 @@ export async function getSongsByIds(ids: string[]): Promise<Song[]> {
  */
 export async function getAllAlbums(): Promise<Album[]> {
   const db = await prisma.album.findMany({
-    include: { tracks: true },
+    include: {
+      tracks: {
+        include: {
+          song: true,
+        },
+      },
+    },
     orderBy: { releaseDate: "desc" },
   });
 
   return db.map((album) => ({
     id: album.id,
-    title: { english: album.titleEnglish, japanese: album.titleJapanese },
+    title: {
+      english: album.titleEnglish,
+      japanese: album.titleJapanese,
+    },
     releaseDate: album.releaseDate.toISOString().split("T")[0],
     type: album.type,
     coverArt: album.coverArt,
     tracks: album.tracks.map((track) => ({
-      songId: track.songId,
+      song: {
+        id: track.song.id,
+        title: {
+          english: track.song.titleEnglish,
+          japanese: track.song.titleJapanese,
+        },
+        length: track.song.length,
+        releaseDate: track.song.releaseDate.toISOString().split("T")[0],
+        description: track.song.description,
+        youtubeId: track.song.youtubeId,
+        nicoId: track.song.nicoId,
+        coverArt: track.song.coverArt,
+        lyrics: {
+          japanese: track.song.lyricsJapanese,
+          romaji: track.song.lyricsRomaji,
+          english: track.song.lyricsEnglish,
+        },
+        year: track.song.year,
+      },
       trackNumber: track.trackNumber,
       isBonusTrack: track.isBonusTrack || undefined,
     })),

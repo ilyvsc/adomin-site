@@ -31,7 +31,7 @@ export type Album = {
 };
 
 export type AlbumTrack = {
-  songId: string;
+  song: Song;
   trackNumber: number;
   isBonusTrack?: boolean;
 };
