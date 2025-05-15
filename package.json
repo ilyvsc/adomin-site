@@ -2,13 +2,16 @@
   "name": "ado-fansite",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "style": "prettier -w .",
-    "db:deploy": "npx prisma migrate deploy && npx prisma generate"
+    "db:deploy": "npx prisma migrate deploy",
+    "db:seed": "npx prisma db seed",
+    "db:provision": "npm run db:deploy && npm run db:seed"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"

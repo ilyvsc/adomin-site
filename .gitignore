@@ -9,6 +9,7 @@
 
 # production
 /build
+prisma/client/
 
 # debug
 npm-debug.log*
