@@ -13,7 +13,8 @@ export interface Song {
   year: number;
   releaseDate: string;
   description: string;
-  youtubeId: string | null;
+  nicoId?: string | null
+  youtubeId?: string | null;
   coverArt: string;
 }
 
@@ -44,7 +45,8 @@ export const songs: Song[] = [
     releaseDate: "2020-10-23",
     description:
       "Ado's breakthrough hit that catapulted her to fame with its raw emotion and powerful vocals addressing societal pressures.",
-    youtubeId: "Qp3b-RXtz4w",
+    // youtubeId: "Qp3b-RXtz4w",
+    nicoId: "sm37761910",
     coverArt:
       "https://i.scdn.co/image/ab67616d0000b27389e3b38cb86ef8cfb0cd8def",
     lyrics: { japanese: "", romaji: "", english: "" },

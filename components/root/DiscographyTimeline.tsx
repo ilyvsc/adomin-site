@@ -14,6 +14,8 @@ import {
 
 import { Song, timelineSongs } from "@/constants/MusicData";
 
+import { NicoNicoPlayer, YouTubePlayer } from "@/utils/VideoEmbed";
+
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function DiscographyTimeline() {
@@ -82,16 +84,16 @@ export function DiscographyTimeline() {
                         {/* Video */}
                         <div className="w-full md:w-1/2">
                           <div className="overflow-hidden rounded-xl bg-background/60 shadow-lg backdrop-blur-sm transition-all hover:scale-[1.015]">
-                            <div className="relative aspect-video overflow-hidden bg-accent">
-                              <iframe
-                                width="100%"
-                                height="100%"
-                                src={`https://www.youtube.com/embed/${song.youtubeId}`}
-                                title={`${song.title.english} by Ado`}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                className="border-0"
-                              ></iframe>
+                            <div className="relative aspect-video overflow-hidden">
+                              {song.youtubeId ? (
+                                <YouTubePlayer song={song} />
+                              ) : song.nicoId ? (
+                                <NicoNicoPlayer song={song} />
+                              ) : (
+                                <div className="flex h-full items-center justify-center text-muted-foreground">
+                                  No preview available
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -150,16 +152,14 @@ export function DiscographyTimeline() {
               {selectedSong?.description}
             </p>
             <div className="mb-6 aspect-video overflow-hidden rounded-md bg-accent">
-              {selectedSong && (
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${selectedSong.youtubeId}`}
-                  title={`${selectedSong.title.english} by Ado`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="border-0"
-                ></iframe>
+              {selectedSong?.youtubeId ? (
+                <YouTubePlayer song={selectedSong} />
+              ) : selectedSong?.nicoId ? (
+                <NicoNicoPlayer song={selectedSong} />
+              ) : (
+                <div className="flex h-full items-center justify-center text-muted-foreground">
+                  No preview available
+                </div>
               )}
             </div>
 

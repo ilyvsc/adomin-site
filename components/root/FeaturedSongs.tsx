@@ -9,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { featuredSongs } from "@/constants/MusicData";
 
+import { NicoNicoPlayer, YouTubePlayer } from "@/utils/VideoEmbed";
+
 export function FeaturedSongs() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
@@ -90,15 +92,15 @@ export function FeaturedSongs() {
                 "
               >
                 <div className="relative aspect-video overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${song.youtubeId}`}
-                    title={`${song.title.english} by Ado`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="border-0"
-                  />
+                  {song.youtubeId ? (
+                    <YouTubePlayer song={song} />
+                  ) : song.nicoId ? (
+                    <NicoNicoPlayer song={song} />
+                  ) : (
+                    <div className="flex h-full items-center justify-center text-muted-foreground">
+                      No preview available
+                    </div>
+                  )}
                 </div>
 
                 <CardHeader className="px-4 pt-4 pb-2">
