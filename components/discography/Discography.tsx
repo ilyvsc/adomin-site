@@ -1,12 +1,12 @@
 "use client";
 
-import { albums, songs } from "@/constants/MusicData";
-
 import Image from "next/image";
 import React from "react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { albums, songs } from "@/constants/MusicData";
 
 function getSongById(id: string) {
   return songs.find((song) => song.id === id) || null;
@@ -14,9 +14,8 @@ function getSongById(id: string) {
 
 export function FullDiscography() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 mb-16">
       <Tabs defaultValue={albums[0].id} className="w-full">
-        {/* Album Tabs */}
         <TabsList className="mx-auto flex flex-wrap justify-left gap-2 p-2">
           {albums.map((album) => (
             <TabsTrigger
@@ -38,9 +37,7 @@ export function FullDiscography() {
             value={album.id}
             className="mt-10 space-y-12"
           >
-            {/* Album Header */}
             <div className="flex flex-col items-start gap-8 md:flex-row">
-              {/* Album image */}
               <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-xl shadow-lg md:h-48 md:w-48">
                 <Image
                   src={album.coverArt || "/placeholder.svg"}
@@ -51,7 +48,6 @@ export function FullDiscography() {
                 />
               </div>
 
-              {/* Album text */}
               <div className="flex flex-col justify-center">
                 <h2 className="mb-4 text-4xl font-extrabold">
                   {album.title.english}{" "}
@@ -77,9 +73,11 @@ export function FullDiscography() {
                 return (
                   <Card
                     key={track.songId}
-                    className="flex flex-col overflow-hidden rounded-2xl bg-background/70 shadow-md backdrop-blur transition-all hover:scale-[1.02] hover:shadow-xl gap-0 py-0"
+                    className="
+                      flex flex-col overflow-hidden rounded-2xl bg-background/70 border-ado-white dark:border-ado-white/30
+                      shadow-md backdrop-blur transition-all hover:scale-[1.02] hover:shadow-xl gap-0 py-0"
                   >
-                    <div className="relative aspect-video overflow-hidden bg-accent">
+                    <div className="relative aspect-video overflow-hidden bg-background">
                       {song.youtubeId ? (
                         <iframe
                           width="100%"
@@ -91,19 +89,20 @@ export function FullDiscography() {
                           className="border-0"
                         ></iframe>
                       ) : (
-                        <div className="bg-muted/50 flex h-full w-full items-center justify-center">
-                          <p className="text-sm text-accent-foreground italic">
+                        <div className="flex h-full w-full items-center justify-center">
+                          <p className="text-sm text-muted-foreground italic">
                             No official video available
                           </p>
                         </div>
                       )}
                     </div>
 
-                    <CardHeader className="p-5">
+                    <CardHeader className="p-4 pb-2">
                       <div className="flex items-center gap-3">
-                        <span className="bg-muted rounded-md px-2 py-1 text-sm font-bold text-foreground">
+                        {/* TODO: refactor to add the trackNumber */}
+                        {/* <span className="bg-ado-blue/90 rounded-md px-2 py-1 text-sm font-bold text-ado-white">
                           #{track.trackNumber}
-                        </span>
+                        </span> */}
                         <h3 className="text-xl font-bold">
                           {song.title.english}{" "}
                           <span className="text-lg font-medium text-ado-key">
@@ -117,7 +116,7 @@ export function FullDiscography() {
                       <p className="text-sm text-muted-foreground">
                         {song.length} • {song.releaseDate}
                       </p>
-                      <p className="text-sm text-accent-foreground">
+                      <p className="text-sm text-foreground dark:text-ado-white">
                         {song.description}
                       </p>
                     </CardContent>

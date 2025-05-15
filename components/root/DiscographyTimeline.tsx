@@ -1,7 +1,5 @@
 "use client";
 
-import { Song, timelineSongs } from "@/constants/MusicData";
-
 import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -13,6 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+
+import { Song, timelineSongs } from "@/constants/MusicData";
 
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
