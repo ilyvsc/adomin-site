@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "./client"
+}
+
+datasource db {
+  provider = "postgres" // "postgresql", "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum AlbumType {
+  single
+  ep
+  album
+}
+
+model Song {
+  id             String   @id
+  titleEnglish   String
+  titleJapanese  String
+  lyricsJapanese String   @default("")
+  lyricsRomaji   String   @default("")
+  lyricsEnglish  String   @default("")
+  length         String
+  year           Int
+  releaseDate    DateTime
+  description    String
+  nicoId         String?
+  youtubeId      String?
+  coverArt       String
+
+  // relations
+  albumTracks AlbumTrack[]
+}
+
+model Album {
+  id            String    @id
+  titleEnglish  String
+  titleJapanese String
+  releaseDate   DateTime
+  type          AlbumType
+  coverArt      String
+
+  // relations
+  tracks AlbumTrack[]
+}
+
+model AlbumTrack {
+  albumId      String
+  songId       String
+  trackNumber  Int
+  isBonusTrack Boolean @default(false)
+
+  album Album @relation(fields: [albumId], references: [id])
+  song  Song  @relation(fields: [songId], references: [id])
+
+  @@id([albumId, songId])
+  @@unique([albumId, trackNumber])
+}

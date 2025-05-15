@@ -2,7 +2,7 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { FullDiscography } from "@/components/discography/Discography";
+import { Discography } from "@/components/discography/Discography";
 import { Footer } from "@/components/layout/Footer";
 
 export default function DiscographyPage() {
@@ -25,7 +25,7 @@ export default function DiscographyPage() {
             release date.
           </p>
         </div>
-        <FullDiscography />
+        <Discography />
       </div>
       <Footer />
     </main>

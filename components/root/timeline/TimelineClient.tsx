@@ -12,13 +12,17 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { Song, timelineSongs } from "@/constants/MusicData";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { Song } from "@/types/Music";
 
 import { NicoNicoPlayer, YouTubePlayer } from "@/utils/VideoEmbed";
 
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+interface TimelineClientProps {
+  readonly songs: readonly Song[];
+}
 
-export function DiscographyTimeline() {
+export function TimelineClient({ songs }: TimelineClientProps) {
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
   const [open, setOpen] = useState(false);
 
@@ -28,11 +32,9 @@ export function DiscographyTimeline() {
   };
 
   // Group songs by year
-  const songsByYear = timelineSongs.reduce(
+  const songsByYear = songs.reduce(
     (acc, song) => {
-      if (!acc[song.year]) {
-        acc[song.year] = [];
-      }
+      acc[song.year] ??= [];
       acc[song.year].push(song);
       return acc;
     },

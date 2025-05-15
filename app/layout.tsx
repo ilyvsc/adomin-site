@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
@@ -43,6 +45,7 @@ export default function RootLayout({
       </head>
 
       <body className={clsx(inter.className, poppins.variable)}>
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

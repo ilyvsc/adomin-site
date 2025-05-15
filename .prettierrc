@@ -30,12 +30,12 @@
     "^@/components/(.*)$",
     "^@/constants/(.*)$",
     "^@/hooks/(.*)$",
+    "^@/types/(.*)$",
     "^@/utils/(.*)$",
     "^@/styles/(.*)$",
     "^@/pages/(.*)$",
     "^@/contexts/(.*)$",
     "^@/config/(.*)$",
-    "^@/types/(.*)$",
     "^[./]"
   ]
 }

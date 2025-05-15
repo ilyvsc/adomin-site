@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: prisma
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER}"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - ado_dev
+    restart: unless-stopped
+    hostname: postgres.local
+
+  web:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    image: ado
+    container_name: ado-web
+    environment:
+      DATABASE_URL: postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@postgres:5432/prisma
+    stdin_open: true
+    tty: true # Keeps the container running for debugging
+    ports:
+      - 3000:3000
+    networks:
+      - ado_dev
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    hostname: ado.local
+
+networks:
+  ado_dev:
+    driver: bridge
+
+volumes:
+  postgres-data:

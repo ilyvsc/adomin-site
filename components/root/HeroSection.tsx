@@ -86,7 +86,7 @@ export function HeroSection() {
           fill
           priority
           className="h-full w-full object-cover"
-          onLoadingComplete={() => setImageLoaded(true)}
+          onLoad={() => setImageLoaded(true)}
         />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-background"></div>
