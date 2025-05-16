@@ -1748,6 +1748,25 @@
     }
   },
   {
+    "id": "kawaikute-gomen",
+    "title": {
+      "english": "Kawaikute Gomen",
+      "japanese": "可愛くてごめん"
+    },
+    "length": "3:39",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "axOhZD3boe8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
     "id": "buriki-no-dance",
     "title": {
       "english": "Buriki No Dance",
