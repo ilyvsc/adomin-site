@@ -108,19 +108,47 @@ export async function getAllAlbums(): Promise<Album[]> {
   }));
 }
 
-const featuredSongIds = ["readymade", "gira-gira", "new-genesis"];
-const timelineSongIds = ["readymade", "usseewa", "gira-gira", "new-genesis"];
+export async function getSongsBySection(key: string): Promise<Song[]> {
+  const section = await prisma.section.findUnique({
+    where: { key },
+    include: {
+      items: {
+        include: { song: true },
+        orderBy: { order: "asc" },
+      },
+    },
+  });
+
+  if (!section) return [];
+
+  return section.items.map(({ song }) => ({
+    id: song.id,
+    title: { english: song.titleEnglish, japanese: song.titleJapanese },
+    lyrics: {
+      japanese: song.lyricsJapanese,
+      romaji: song.lyricsRomaji,
+      english: song.lyricsEnglish,
+    },
+    length: song.length,
+    year: song.year,
+    releaseDate: song.releaseDate.toISOString().split("T")[0],
+    description: song.description,
+    nicoId: song.nicoId,
+    youtubeId: song.youtubeId,
+    coverArt: song.coverArt,
+  }));
+}
 
 /**
  * Fetch the featured songs in defined order.
  */
 export async function getFeaturedSongs(): Promise<Song[]> {
-  return getSongsByIds(featuredSongIds);
+  return getSongsBySection("featuredSongs");
 }
 
 /**
  * Fetch the timeline songs in defined order.
  */
 export async function getTimelineSongs(): Promise<Song[]> {
-  return getSongsByIds(timelineSongIds);
+  return getSongsBySection("timelineSongs");
 }

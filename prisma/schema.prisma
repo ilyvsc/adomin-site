@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "./client"
+  output   = "./client"
 }
 
 datasource db {
@@ -31,6 +31,7 @@ model Song {
 
   // relations
   albumTracks AlbumTrack[]
+  SectionItem SectionItem[]
 }
 
 model Album {
@@ -56,4 +57,24 @@ model AlbumTrack {
 
   @@id([albumId, songId])
   @@unique([albumId, trackNumber])
+}
+
+model Section {
+  id    String        @id @default(cuid())
+  key   String        @unique // e.g. "featuredSongs", "timelineSongs"
+  items SectionItem[]
+}
+
+model SectionItem {
+  sectionId String
+  songId    String
+  order     Int
+
+  // relations
+  section Section @relation(fields: [sectionId], references: [id])
+  song    Song    @relation(fields: [songId], references: [id])
+
+  @@id([sectionId, songId])
+  @@unique([sectionId, order])
+  @@index([songId])
 }
