@@ -107,9 +107,11 @@ export function TimelineClient({ songs }: TimelineClientProps) {
                           </div>
                           <h3 className="text-2xl font-bold">
                             {song.title.english}{" "}
-                            <span className="text-ado-key">
-                              ({song.title.japanese})
-                            </span>
+                            {song.title.japanese && (
+                              <span className="text-ado-key">
+                                ({song.title.japanese})
+                              </span>
+                            )}
                           </h3>
                           <p className="text-accent-foreground">
                             {song.description}

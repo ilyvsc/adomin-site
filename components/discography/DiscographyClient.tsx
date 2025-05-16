@@ -51,9 +51,11 @@ export function DiscographyClient({ albums }: DiscographyClientProps) {
               <div className="flex flex-col justify-center">
                 <h2 className="mb-4 text-4xl font-extrabold">
                   {album.title.english}{" "}
-                  <span className="text-2xl font-medium text-ado-key">
-                    ({album.title.japanese})
-                  </span>
+                  {album.title.japanese && (
+                    <span className="text-2xl font-medium text-ado-key">
+                      ({album.title.japanese})
+                    </span>
+                  )}
                 </h2>
                 <p className="text-lg text-accent-foreground">
                   Released:{" "}
@@ -97,9 +99,11 @@ export function DiscographyClient({ albums }: DiscographyClientProps) {
                     <div className="flex items-center gap-3">
                       <h3 className="text-xl font-bold">
                         {track.song.title.english}{" "}
-                        <span className="text-lg font-medium text-ado-key">
-                          ({track.song.title.japanese})
-                        </span>
+                        {track.song.title.japanese && (
+                          <span className="text-lg font-medium text-ado-key">
+                            ({track.song.title.japanese})
+                          </span>
+                        )}
                       </h3>
                     </div>
                   </CardHeader>
