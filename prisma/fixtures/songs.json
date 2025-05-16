@@ -41,11 +41,12 @@
       "english": "Gira Gira",
       "japanese": "ギラギラ"
     },
-    "length": "3:36",
+    "length": "4:37",
     "year": 2021,
-    "releaseDate": "2021-04-26",
-    "description": "A powerful song that showcases Ado's incredible vocal range and emotional delivery.",
+    "releaseDate": "2021-02-14",
+    "description": "",
     "youtubeId": "sOiMD45QGLs",
+    "nicoId": "sm38325925",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273a017946e3afa6b0d4e7eb123",
     "lyrics": {
       "japanese": "",
@@ -59,11 +60,12 @@
       "english": "Odo",
       "japanese": "踊"
     },
-    "length": "3:40",
+    "length": "3:29",
     "year": 2021,
     "releaseDate": "2021-08-22",
-    "description": "An energetic track with a traditional Japanese influence that showcases Ado's versatility.",
+    "description": "",
     "youtubeId": "YnSW8ian29w",
+    "nicoId": "sm38668379",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b2730f7bef8299e3738350d6846e",
     "lyrics": {
       "japanese": "",
@@ -80,8 +82,9 @@
     "length": "3:22",
     "year": 2021,
     "releaseDate": "2021-06-14",
-    "description": "A melancholic yet powerful song that demonstrates Ado's ability to convey deep emotions.",
+    "description": "",
     "youtubeId": "cSgZxz3le7s",
+    "nicoId": "sm38908617",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273cb04d918042b247b265022a9",
     "lyrics": {
       "japanese": "",
@@ -126,6 +129,177 @@
     }
   },
   {
+    "id": "sakura-biyori-time-machine",
+    "title": {
+      "english": "Sakura Biyori To Time Machine",
+      "japanese": "桜日和とタイムマシン with 初音ミク"
+    },
+    "length": "5:30",
+    "year": 2024,
+    "releaseDate": "2024-10-26",
+    "description": "",
+    "youtubeId": "nIWZfhpnq6M",
+    "nicoId": "sm44254722",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273ed2e5fe9927f70863934c134",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "shoka",
+    "title": {
+      "english": "Shoka",
+      "japanese": "初夏"
+    },
+    "length": "3:55",
+    "year": 2024,
+    "releaseDate": "2024-10-27",
+    "description": "",
+    "youtubeId": "GORsp0gc2Nc",
+    "nicoId": "sm44254778",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273283a117f2bc39bc4122692c0",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "readymade",
+    "title": {
+      "english": "Readymade",
+      "japanese": "レディメイド"
+    },
+    "length": "4:02",
+    "year": 2021,
+    "releaseDate": "2020-12-24",
+    "description": "",
+    "youtubeId": "jg09lNupc1s",
+    "nicoId": "sm38056551",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27360fe03540adbfc0a842ebd1d",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "fireworks",
+    "title": {
+      "english": "Fireworks",
+      "japanese": "花火"
+    },
+    "length": "3:35",
+    "year": 2022,
+    "releaseDate": "2022-01-26",
+    "description": "",
+    "youtubeId": "5_-TcIOxm60",
+    "nicoId": "sm40100114",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273f5912abed0ea22e746552771",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "kagakushu",
+    "title": {
+      "english": "Kagakushu",
+      "japanese": "過学習"
+    },
+    "length": "3:34",
+    "year": 2022,
+    "releaseDate": "2022-03-06",
+    "description": "",
+    "youtubeId": "55W2LxbQoHc",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27364381fb5ba549f149ae74560",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "eien-no-akuruhi",
+    "title": {
+      "english": "Eien No Akuruhi",
+      "japanese": "永遠のあくる日"
+    },
+    "length": "4:06",
+    "year": 2022,
+    "releaseDate": "2022-03-14",
+    "description": "",
+    "youtubeId": "ZHAnZTVF_10",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273a76561498807222449c8496c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "domestic-violence",
+    "title": {
+      "english": "Domestic De Violence",
+      "japanese": "ドメスティックでバイオレンス"
+    },
+    "length": "2:36",
+    "year": 2022,
+    "releaseDate": "2022-03-26",
+    "description": "",
+    "youtubeId": "iRMYLKIWyUk",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "motherland",
+    "title": {
+      "english": "Motherland",
+      "japanese": "マザーランド"
+    },
+    "length": "4:20",
+    "year": 2022,
+    "releaseDate": "2022-05-08",
+    "description": "",
+    "youtubeId": "_wZfYtYwxro",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "lucky-bruto",
+    "title": {
+      "english": "Lucky Bruto",
+      "japanese": "ラッキー・ブルート"
+    },
+    "length": "3:27",
+    "year": 2022,
+    "releaseDate": "2022-05-08",
+    "description": "",
+    "youtubeId": "u-G_zzhLSy8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27364381fb5ba549f149ae74560",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
     "id": "new-genesis",
     "title": {
       "english": "New Genesis",
@@ -136,6 +310,7 @@
     "releaseDate": "2022-06-15",
     "description": "The opening theme for the One Piece Film: Red, demonstrating Ado's incredible vocal power.",
     "youtubeId": "1FliVTcX8bQ",
+    "nicoId": "",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273f24f7db074ee5a9042ecb9a2",
     "lyrics": {
       "japanese": "",
@@ -152,9 +327,580 @@
     "length": "4:09",
     "year": 2022,
     "releaseDate": "2022-07-06",
-    "description": "Another song from the One Piece Film: Red soundtrack, showcasing Ado's emotional range.",
+    "description": "",
     "youtubeId": "gt-v_YCkaMY",
+    "nicoId": "",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b2736ba460b21288fc379f941d60",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "im-invincible",
+    "title": {
+      "english": "I'm Invincible",
+      "japanese": "私は最強"
+    },
+    "length": "4:29",
+    "year": 2022,
+    "releaseDate": "2022-07-22",
+    "description": "",
+    "youtubeId": "sk1Z-Hqwwog",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2736b6b10944d514599819d21e5",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "fleeting-lullaby",
+    "title": {
+      "english": "Fleeting Lullaby",
+      "japanese": "ウタカタララバイ"
+    },
+    "length": "3:13",
+    "year": 2022,
+    "releaseDate": "2022-08-06",
+    "description": "",
+    "youtubeId": "hyV1AJiFNyo",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "world-continuation",
+    "title": {
+      "english": "The World's Continuation",
+      "japanese": "世界のつづき"
+    },
+    "length": "4:55",
+    "year": 2022,
+    "releaseDate": "2022-08-10",
+    "description": "",
+    "youtubeId": "b3GCfyNKeLs",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "tot-musica",
+    "title": {
+      "english": "Tot Musica",
+      "japanese": ""
+    },
+    "length": "3:21",
+    "year": 2022,
+    "releaseDate": "2022-08-17",
+    "description": "",
+    "youtubeId": "V9_ZpqfqHFI",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "where-wind-blows",
+    "title": {
+      "english": "Where the Wind Blows",
+      "japanese": "風のゆくえ"
+    },
+    "length": "4:46",
+    "year": 2022,
+    "releaseDate": "2022-08-24",
+    "description": "",
+    "youtubeId": "YO-rXgQKlF8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "binkusuno-sake",
+    "title": {
+      "english": "Binks no Sake",
+      "japanese": "ビンクスの酒"
+    },
+    "length": "3:26",
+    "year": 2022,
+    "releaseDate": "2022-08-09",
+    "description": "",
+    "youtubeId": "Z-WdGYi9Pv4",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "aishite",
+    "title": {
+      "english": "Aishite Aishite Aishite",
+      "japanese": ""
+    },
+    "length": "4:18",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "U8BlNEKq0r8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "dried-flowers",
+    "title": {
+      "english": "Dried Flowers",
+      "japanese": ""
+    },
+    "length": "4:48",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "qhmrt3ZNgcs",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "kazarijyanainoyonamidawa",
+    "title": {
+      "english": "Kazarijyanainoyonamidawa",
+      "japanese": ""
+    },
+    "length": "4:12",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "Mtfkq7doqWw",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "crime-punishment",
+    "title": {
+      "english": "Crime and Punishment",
+      "japanese": ""
+    },
+    "length": "4:50",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "x1UsJ2Znjk0",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "villain",
+    "title": {
+      "english": "Villain",
+      "japanese": ""
+    },
+    "length": "3:19",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "vvG3BhuBLz8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "godish",
+    "title": {
+      "english": "God-ish",
+      "japanese": ""
+    },
+    "length": "3:24",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "7i_nc5GGIsI",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "unravel",
+    "title": {
+      "english": "unravel",
+      "japanese": ""
+    },
+    "length": "3:58",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "eZuDklxsaRg",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "buriki-no-dance",
+    "title": {
+      "english": "Buriki No Dance",
+      "japanese": ""
+    },
+    "length": "3:22",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "iL7uoLCbJoc",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "dawn-fireflies",
+    "title": {
+      "english": "Dawn and Fireflies",
+      "japanese": ""
+    },
+    "length": "5:08",
+    "year": 2023,
+    "releaseDate": "2023-12-12",
+    "description": "",
+    "youtubeId": "1T6b26DTQy4",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273514fd72cb9c93ad0e227f633",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "rebellion",
+    "title": {
+      "english": "Rebellion",
+      "japanese": "リベリオン"
+    },
+    "length": "2:58",
+    "year": 2022,
+    "releaseDate": "2022-09-19",
+    "description": "",
+    "youtubeId": "0Y8e0LJf0i0",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2736260cea60fcc0e4c9f29764c",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "missing",
+    "title": {
+      "english": "missing",
+      "japanese": "行方知れず"
+    },
+    "length": "3:09",
+    "year": 2022,
+    "releaseDate": "2022-10-10",
+    "description": "",
+    "youtubeId": "VQtmqpSE64w",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2733b3b781a0164e91b346bf888",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "freedom",
+    "title": {
+      "english": "FREEDOM",
+      "japanese": "行方知れず"
+    },
+    "length": "3:01",
+    "year": 2022,
+    "releaseDate": "2022-11-24",
+    "description": "",
+    "youtubeId": "hgyGhu49sGc",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27364381fb5ba549f149ae74560",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "all-night-radio",
+    "title": {
+      "english": "All Night Radio",
+      "japanese": "オールナイトレディオ"
+    },
+    "length": "3:34",
+    "year": 2023,
+    "releaseDate": "2023-11-11",
+    "description": "",
+    "youtubeId": "lfw8W3uWO7s",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2731b20471a763f252ba1b03994",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "hello-signals",
+    "title": {
+      "english": "Hello Signals",
+      "japanese": ""
+    },
+    "length": "3:18",
+    "year": 2023,
+    "releaseDate": "2023-12-25",
+    "description": "",
+    "youtubeId": "WEYTjr4z70o",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2737e39bafe4f50dd5e15cfe9b0",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "chocolat-cadabra",
+    "title": {
+      "english": "Chocolat Cadabra",
+      "japanese": "ショコラカタブラ"
+    },
+    "length": "3:03",
+    "year": 2024,
+    "releaseDate": "2024-07-31",
+    "description": "",
+    "youtubeId": "c5j7lpWprro",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27327b4a270deefbf92cbd52353",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "value",
+    "title": {
+      "english": "Value",
+      "japanese": ""
+    },
+    "length": "3:12",
+    "year": 2024,
+    "releaseDate": "2024-02-23",
+    "description": "",
+    "youtubeId": "5iAQF_q6FSk",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273d966b410803fa97a0ace7ad8",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "zero",
+    "title": {
+      "english": "0",
+      "japanese": ""
+    },
+    "length": "3:00",
+    "year": 2024,
+    "releaseDate": "2024-07-10",
+    "description": "",
+    "youtubeId": "E9UPr5SesCM",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2737ac841876cee380bbeb3fdc1",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "mirror",
+    "title": {
+      "english": "MIRROR",
+      "japanese": ""
+    },
+    "length": "2:59",
+    "year": 2024,
+    "releaseDate": "2024-05-31",
+    "description": "",
+    "youtubeId": "zsBBWBEZkFQ",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273dfdacb364c44d7365b6139b7",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "rule",
+    "title": {
+      "english": "RuLe",
+      "japanese": "ルル"
+    },
+    "length": "3:18",
+    "year": 2024,
+    "releaseDate": "2024-07-05",
+    "description": "",
+    "youtubeId": "0Z_YqhYHhpg",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273136c89edd5683016f3b4cf4a",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "episode-x",
+    "title": {
+      "english": "Episode X",
+      "japanese": ""
+    },
+    "length": "3:45",
+    "year": 2024,
+    "releaseDate": "2024-12-06",
+    "description": "",
+    "youtubeId": "9dKZeL2UbUM",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2738e43712455d553316feae3b1",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "nukegara",
+    "title": {
+      "english": "Nukegara",
+      "japanese": "抜け空"
+    },
+    "length": "3:08",
+    "year": 2024,
+    "releaseDate": "2024-12-30",
+    "description": "",
+    "youtubeId": "JpnqXqy-XMg",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2738e43712455d553316feae3b1",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "elf",
+    "title": {
+      "english": "Elf",
+      "japanese": ""
+    },
+    "length": "4:22",
+    "year": 2025,
+    "releaseDate": "2025-01-24",
+    "description": "",
+    "youtubeId": "SbxR25brgoE",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2739e1c223d7a087f9dfb3757fe",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "bouquet-for-me",
+    "title": {
+      "english": "Bouquet for Me",
+      "japanese": ""
+    },
+    "length": "3:47",
+    "year": 2025,
+    "releaseDate": "2025-04-06",
+    "description": "",
+    "youtubeId": "_RAffg8JQ6g",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273c65febccea6decd687e95b41",
+    "lyrics": {
+      "japanese": "",
+      "romaji": "",
+      "english": ""
+    }
+  },
+  {
+    "id": "rockstar",
+    "title": {
+      "english": "Rockstar",
+      "japanese": ""
+    },
+    "length": "3:51",
+    "year": 2025,
+    "releaseDate": "2025-04-09",
+    "description": "",
+    "youtubeId": "hRJpiCZlLX8",
+    "nicoId": "",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2737e39bafe4f50dd5e15cfe9b0",
     "lyrics": {
       "japanese": "",
       "romaji": "",
