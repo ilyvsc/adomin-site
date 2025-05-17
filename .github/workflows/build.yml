@@ -1,0 +1,32 @@
+name: Build
+on:
+  push:
+    paths:
+      - prisma/migrations/**
+    branches:
+      - main
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+
+      - name: Apply code style correction
+        run: npx prettier --check .
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Apply all pending migrations to the database
+        run: npx prisma migrate deploy
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Generate Prisma client
+        run: npx prisma generate --no-engine
