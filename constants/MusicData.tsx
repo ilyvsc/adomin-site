@@ -108,9 +108,9 @@ export async function getAllAlbums(): Promise<Album[]> {
   }));
 }
 
-export async function getSongsBySection(key: string): Promise<Song[]> {
+export async function getSongsBySection(id: string): Promise<Song[]> {
   const section = await prisma.section.findUnique({
-    where: { key },
+    where: { id },
     include: {
       items: {
         include: { song: true },

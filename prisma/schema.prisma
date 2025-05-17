@@ -60,8 +60,7 @@ model AlbumTrack {
 }
 
 model Section {
-  id    String        @id @default(cuid())
-  key   String        @unique // e.g. "featuredSongs", "timelineSongs"
+  id   String        @id @unique // e.g. "featuredSongs", "timelineSongs"
   items SectionItem[]
 }
 

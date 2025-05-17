@@ -51,7 +51,7 @@ interface AlbumDefinition {
 }
 
 interface SectionDefinition {
-  key: string;
+  id: string;
   items: string[];
 }
 
@@ -104,8 +104,8 @@ function getDefaultSections(): SectionDefinition[] {
   const timelineSongIds = ["readymade", "usseewa", "gira-gira", "new-genesis"];
 
   return [
-    { key: "featuredSongs", items: featuredSongIds },
-    { key: "timelineSongs", items: timelineSongIds },
+    { id: "featuredSongs", items: featuredSongIds },
+    { id: "timelineSongs", items: timelineSongIds },
   ];
 }
 
@@ -200,10 +200,10 @@ async function seedSongs(songs: SongData[]) {
 }
 
 async function seedSections(sections: SectionDefinition[]) {
-  for (const { key, items } of sections) {
+  for (const { id, items } of sections) {
     const section = await prisma.section.upsert({
-      where: { key },
-      create: { key },
+      where: { id },
+      create: { id },
       update: {},
     });
 
@@ -218,7 +218,7 @@ async function seedSections(sections: SectionDefinition[]) {
       skipDuplicates: true,
     });
 
-    console.log(`🔧 Section "${key}" has ${items.length} items.`);
+    console.log(`🔧 Section "${id}" has ${items.length} items.`);
   }
   console.log("✅ Sections & SectionItems seeded!");
 }
