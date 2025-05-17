@@ -141,9 +141,11 @@ export function TimelineClient({ songs }: TimelineClientProps) {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-2xl">
               {selectedSong?.title.english}{" "}
-              <span className="text-ado-key">
-                ({selectedSong?.title.japanese})
-              </span>
+              {selectedSong?.title.japanese && (
+                <span className="text-ado-key">
+                  ({selectedSong?.title.japanese})
+                </span>
+              )}
             </DialogTitle>
 
             <DialogDescription className="text-left text-sm">
