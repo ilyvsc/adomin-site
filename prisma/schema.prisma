@@ -1,26 +1,19 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "./client"
 }
 
 datasource db {
-  provider = "postgres" // "postgresql", "mysql"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
-enum AlbumType {
-  single
-  ep
-  album
-}
-
 model Song {
-  id             String   @id
+  id             String        @id
   titleEnglish   String
   titleJapanese  String
-  lyricsJapanese String   @default("")
-  lyricsRomaji   String   @default("")
-  lyricsEnglish  String   @default("")
+  lyricsJapanese String        @default("")
+  lyricsRomaji   String        @default("")
+  lyricsEnglish  String        @default("")
   length         String
   year           Int
   releaseDate    DateTime
@@ -28,22 +21,18 @@ model Song {
   nicoId         String?
   youtubeId      String?
   coverArt       String
-
-  // relations
-  albumTracks AlbumTrack[]
-  SectionItem SectionItem[]
+  albumTracks    AlbumTrack[]
+  SectionItem    SectionItem[]
 }
 
 model Album {
-  id            String    @id
+  id            String       @id
   titleEnglish  String
   titleJapanese String
   releaseDate   DateTime
   type          AlbumType
   coverArt      String
-
-  // relations
-  tracks AlbumTrack[]
+  tracks        AlbumTrack[]
 }
 
 model AlbumTrack {
@@ -51,16 +40,15 @@ model AlbumTrack {
   songId       String
   trackNumber  Int
   isBonusTrack Boolean @default(false)
-
-  album Album @relation(fields: [albumId], references: [id])
-  song  Song  @relation(fields: [songId], references: [id])
+  album        Album   @relation(fields: [albumId], references: [id])
+  song         Song    @relation(fields: [songId], references: [id])
 
   @@id([albumId, songId])
   @@unique([albumId, trackNumber])
 }
 
 model Section {
-  id   String        @id @unique // e.g. "featuredSongs", "timelineSongs"
+  id    String        @id @unique
   items SectionItem[]
 }
 
@@ -68,12 +56,16 @@ model SectionItem {
   sectionId String
   songId    String
   order     Int
-
-  // relations
-  section Section @relation(fields: [sectionId], references: [id])
-  song    Song    @relation(fields: [songId], references: [id])
+  section   Section @relation(fields: [sectionId], references: [id])
+  song      Song    @relation(fields: [songId], references: [id])
 
   @@id([sectionId, songId])
   @@unique([sectionId, order])
   @@index([songId])
+}
+
+enum AlbumType {
+  single
+  ep
+  album
 }
