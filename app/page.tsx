@@ -8,6 +8,8 @@ import { NewsletterSection } from "@/components/root/Newsletter";
 import { FeaturedSongs } from "@/components/root/featured-songs/FeaturedSongs";
 import { DiscographyTimeline } from "@/components/root/timeline/Timeline";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
