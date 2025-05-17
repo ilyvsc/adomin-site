@@ -1,8 +1,8 @@
+import { PrismaClient } from "@prisma/client";
+
 import { readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-
-import { PrismaClient } from "@/prisma/client";
 
 interface Song {
   id: string;
@@ -85,14 +85,14 @@ function transformSongData(songsRaw: Song[]): SongData[] {
   return songsRaw.map((s) => ({
     id: s.id,
     titleEnglish: s.title.english,
-    titleJapanese: s.title.japanese,
-    lyricsJapanese: s.lyrics.japanese,
-    lyricsRomaji: s.lyrics.romaji,
-    lyricsEnglish: s.lyrics.english,
+    titleJapanese: s.title?.japanese,
+    lyricsJapanese: s.lyrics?.japanese,
+    lyricsRomaji: s.lyrics?.romaji,
+    lyricsEnglish: s.lyrics?.english,
     length: parseLength(s.length),
     year: s.year,
     releaseDate: s.releaseDate,
-    description: s.description,
+    description: s?.description,
     nicoId: s.nicoId ?? "",
     youtubeId: s.youtubeId ?? "",
     coverArt: s.coverArt,
@@ -101,7 +101,14 @@ function transformSongData(songsRaw: Song[]): SongData[] {
 
 function getDefaultSections(): SectionDefinition[] {
   const featuredSongIds = ["readymade", "gira-gira", "new-genesis"];
-  const timelineSongIds = ["readymade", "usseewa", "gira-gira", "new-genesis"];
+  const timelineSongIds = [
+    "kimi-no-taion",
+    "usseewa",
+    "readymade",
+    "kura-kura",
+    "new-genesis",
+    "rockstar",
+  ];
 
   return [
     { id: "featuredSongs", items: featuredSongIds },
@@ -117,7 +124,8 @@ function getAlbumDefinitions(): AlbumDefinition[] {
       titleJapanese: "歌ってみた",
       releaseDate: new Date("2023-12-13"),
       type: "album" as const,
-      coverArt: "https://i.scdn.co/image/ab67616d0000b273f5912abed0ea22e746552771",
+      coverArt:
+        "https://i.scdn.co/image/ab67616d0000b273f5912abed0ea22e746552771",
       tracks: [
         { songId: "dried-flowers", trackNumber: 1 },
         { songId: "kazarijyanainoyonamidawa", trackNumber: 2 },
@@ -137,7 +145,8 @@ function getAlbumDefinitions(): AlbumDefinition[] {
       titleJapanese: "狂言",
       releaseDate: new Date("2022-01-26"),
       type: "album" as const,
-      coverArt: "https://i.scdn.co/image/ab67616d0000b27364381fb5ba549f149ae74560",
+      coverArt:
+        "https://i.scdn.co/image/ab67616d0000b27364381fb5ba549f149ae74560",
       tracks: [
         { songId: "readymade", trackNumber: 1 },
         { songId: "odo", trackNumber: 2 },
@@ -161,7 +170,8 @@ function getAlbumDefinitions(): AlbumDefinition[] {
       titleJapanese: "ウタの歌 ONE PIECE FILM RED",
       releaseDate: new Date("2022-08-10"),
       type: "album" as const,
-      coverArt: "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
+      coverArt:
+        "https://i.scdn.co/image/ab67616d0000b2730cbecafa929898c82adc519c",
       tracks: [
         { songId: "new-genesis", trackNumber: 1 },
         { songId: "im-invincible", trackNumber: 2 },
@@ -247,7 +257,9 @@ async function seedAlbums(albumDefinitions: AlbumDefinition[]) {
       skipDuplicates: true,
     });
 
-    console.log(`✅ Album "${def.titleEnglish}" seeded with ${def.tracks.length} tracks.`);
+    console.log(
+      `✅ Album "${def.titleEnglish}" seeded with ${def.tracks.length} tracks.`,
+    );
   }
 }
 
