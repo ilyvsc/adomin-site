@@ -5,6 +5,8 @@ import React from "react";
 import { Discography } from "@/components/discography/Discography";
 import { Footer } from "@/components/layout/Footer";
 
+export const dynamic = "force-dynamic";
+
 export default function DiscographyPage() {
   return (
     <main className="min-h-screen bg-background">
