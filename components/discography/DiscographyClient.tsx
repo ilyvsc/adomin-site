@@ -35,7 +35,7 @@ export function DiscographyClient({ albums }: DiscographyClientProps) {
           <TabsContent
             key={album.id}
             value={album.id}
-            className="mt-10 space-y-12"
+            className="mt-16 md:mt-10 space-y-12"
           >
             <div className="flex flex-col items-start gap-8 md:flex-row">
               <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-xl shadow-lg md:h-48 md:w-48">
