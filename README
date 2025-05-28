@@ -6,11 +6,11 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github&labelColor=001219&color=blue)](CODE_OF_CONDUCT.md)
 [![code style](https://img.shields.io/badge/code_style-prettier-F7B93E.svg?labelColor=001219)](https://github.com/prettier/prettier)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fado.fan&labelColor=001219)](https://ado.fan)
-[![Join Ado Hangout Discord!](https://img.shields.io/badge/Ado_Hangout-001219?logo=discord)][fan-discord]
+[![Join Ado Hangout Discord!](https://img.shields.io/badge/Ado_Hangout-001219?logo=discord)](https://discord.gg/ado1024)
 
 <p>
 <br>
-A fan tribute for the Japanese artist Ado.
+A fan tribute to the Japanese artist Ado.
 <br>
 <sub>
   Built with 💙 by
@@ -30,7 +30,7 @@ A fan tribute for the Japanese artist Ado.
 
 Setting up a local development environment is easy, for now.
 
-Clone (or fork) this repo on your machine, navigate to its location in the terminal and follow the steps below.
+Clone (or fork) this repo on your machine, navigate to its location in the terminal, and follow the steps below.
 
 ### Manual Setup
 
@@ -66,16 +66,13 @@ pnpm prisma generate --no-engine
 pnpm run dev
 ```
 
-This will initialize all packages in parallel and watch for changes, including the website which will be available at [localhost:3000](http://localhost:3000).
+This will initialize all packages in parallel and watch for changes, including the website, which will be available at [localhost:3000](http://localhost:3000).
 
 ### Environment variables
 
-To deploy the project you need to set the following environment variables:
+To deploy the project, you need to set the following environment variables:
 
-- `DATABASE_URL`: **Required**. Sets the URL where Prisma it's going to fetch/query data from. Get yours at <https://prisma.io>
-
-<!-- link definitions -->
-[fan-discord]: https://discord.gg/ado1024
+- `DATABASE_URL`: **Required**. Sets the URL where Prisma is going to fetch/query data from. Get yours at <https://prisma.io>
 
 ## License
 
