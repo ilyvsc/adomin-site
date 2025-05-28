@@ -1,4 +1,4 @@
-[![Adobum][banner-image]][banner-url]
+[![Banner](https://ado-shop.com/cdn/shop/files/Ado_BEST_5000x2000_banner_ENG2.jpg)][banner-url]
 
 <div align="center">
 
@@ -76,7 +76,6 @@ To deploy the project you need to set the following environment variables:
 
 <!-- link definitions -->
 [banner-url]: https://www.ado.fan/
-[banner-image]: https://ado-shop.com/cdn/shop/files/Ado_BEST_5000x2000_banner_ENG2.jpg
 [fan-discord]: https://discord.gg/ado1024
 
 ## License
