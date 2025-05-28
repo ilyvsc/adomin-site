@@ -1,4 +1,4 @@
-[![Banner](https://ado-shop.com/cdn/shop/files/Ado_BEST_5000x2000_banner_ENG2.jpg)][banner-url]
+[![Banner](https://ado-shop.com/cdn/shop/files/Ado_BEST_5000x2000_banner_ENG2.jpg)](https://www.ado.fan/)
 
 <div align="center">
 
@@ -75,7 +75,6 @@ To deploy the project you need to set the following environment variables:
 - `DATABASE_URL`: **Required**. Sets the URL where Prisma it's going to fetch/query data from. Get yours at <https://prisma.io>
 
 <!-- link definitions -->
-[banner-url]: https://www.ado.fan/
 [fan-discord]: https://discord.gg/ado1024
 
 ## License
