@@ -1,25 +1,3 @@
-<div align="center">
-
-[![Build CI Status](https://github.com/ilyvsc/ado.fan/actions/workflows/build.yml/badge.svg)](https://github.com/ilyvsc/ado.fan/actions/workflows/build.yml)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github&labelColor=001219&color=blue)](CODE_OF_CONDUCT.md)
-[![code style](https://img.shields.io/badge/code_style-prettier-F7B93E.svg?labelColor=001219)](https://github.com/prettier/prettier)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fado.fan&labelColor=001219)](https://ado.fan)
-[![Join Ado Hangout Discord!](https://img.shields.io/badge/Ado_Hangout-001219?logo=discord)](https://discord.gg/ado1024)
-
-<p>
-<br>
-A fan tribute to the Japanese artist Ado.
-<br>
-<sub>
-  Built with 💙 by
-  <a href="https://github.com/ilyvsc/ado.fan/graphs/contributors">
-    fans.
-  </a>
-  Powered by passion, not profit.
-</sub>
-</p>
-
-</div>
 
 ## Development
 
