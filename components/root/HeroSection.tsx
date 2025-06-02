@@ -50,20 +50,16 @@ export function HeroSection() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
+    if (isInView) {
+      contentControls.start("animate");
+    }
+  }, [isInView, contentControls]);
+
+  useEffect(() => {
     if (imageLoaded) {
       backgroundControls.start("animate");
     }
   }, [imageLoaded, backgroundControls]);
-
-  useEffect(() => {
-    if (isInView && imageLoaded) {
-      const timer = setTimeout(() => {
-        contentControls.start("animate");
-      }, 100);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isInView, imageLoaded, contentControls]);
 
   return (
     <section
@@ -87,6 +83,8 @@ export function HeroSection() {
           priority
           className="h-full w-full object-cover"
           onLoad={() => setImageLoaded(true)}
+          sizes="100vw"
+          quality={75}
         />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-background"></div>
@@ -105,6 +103,7 @@ export function HeroSection() {
             height={80}
             className="h-32 w-32 md:h-40 md:w-40 object-contain"
             priority
+            sizes="(max-width: 768px) 128px, 160px"
           />
         </motion.div>
 
